@@ -16,7 +16,7 @@
  * -------------------------------------------
  */
 
-var TitleScene = new Phaser.Class({
+export default class TitleScene extends Phaser.Scene({
     Extends: Phaser.Scene,
 
     initialize(config)
