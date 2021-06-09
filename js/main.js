@@ -27,7 +27,7 @@ if (isItMobile == -1) {
         height: window.innerHeight,
         autoResize: true,
         parent: 'gameCanvas', // Dom Element
-        scene: [],
+        scene: scenes,
         backgroundColor: 0, // Custom RGB colour.
         physics: {
             default: 'arcade'
@@ -62,7 +62,7 @@ if (isItMobile == -1) {
         height: 320, // y height - best results use the golden ratio
         autoResize: true,
         parent: 'gameCanvas', // Dom Element
-        scene: [scenes],
+        scene: scenes,
         backgroundColor: 0, // Custom RGB colour.
         physics: {
             default: 'arcade'
@@ -90,5 +90,5 @@ if (isItMobile == -1) {
 
 // Game launch method.
 document.addEventListener('DOMContentLoaded', function () {
-    window.GAMENAME.main();
+    window.game = new Game(config);
 }, false);
