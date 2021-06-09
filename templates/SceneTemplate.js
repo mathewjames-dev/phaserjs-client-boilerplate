@@ -16,22 +16,21 @@
  * -------------------------------------------
  */
 
-export default class TitleScene extends Phaser.Scene{
-    Extends: Phaser.Scene,
+class TitleScene extends Phaser.Scene{
 
     initialize(config)
     {
         Phaser.Scene.call(this, { key: 'Title',config });
-    },
+    }
 
-	init(data) {},
+	init(data) {}
 	
     preload ()
     {
         this.load.image('key', 'assets/images/.png');
-    },
+    }
 
-    create: function create (data)
+    create (data)
     {
         this.add.image(0, 0, 'key').setOrigin(0);
 
@@ -42,7 +41,9 @@ export default class TitleScene extends Phaser.Scene{
             this.scene.start('Game');
 
         }, this);
-    },
+    }
 	
-	update: function (time, delta) {}
+	update(time, delta) {}
 }
+
+module.exports = TitleScene;
